@@ -16,5 +16,6 @@ def remove_duplicates_from_sorted(nums):
     for i in range(1, len(nums)):
         if nums[i] != nums[prev]:
             prev+=1
-    return prev+1
+            nums[prev]=nums[i]
+    return nums
 print(remove_duplicates_from_sorted([1,1,2]))
