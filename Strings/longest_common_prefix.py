@@ -11,4 +11,4 @@ Input: strs = ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
 """
-def 
+def
