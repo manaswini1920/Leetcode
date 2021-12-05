@@ -14,17 +14,27 @@ Output: [1]
 Explanation: The arrays we are merging are [1] and [].
 The result of the merge is [1].
 '''
-def merge_sorted_arrays(nums1,nums2):
+def merge_sorted_arrays(nums1,m,nums2,n):
     i = 0
     j = 0
-    while i < len(nums1):
-        if nums1[i] < nums2[j]:
-            nums1.insert(i + 1, nums2[j])
+    k = 0
+    temp = nums1.copy()
+    while i < m and j < n:
+        if temp[i] < nums2[j]:
+            nums1[k] = temp[i]
             i += 1
+        else:
+            nums1[k] = nums2[j]
             j += 1
-        elif nums1[i] >= nums2[j]:
-            nums1.insert(i, nums2[j])
-            j += 1
-            i += 1
+        k += 1
+    # left over elements
+    while i < m:
+        nums1[k] = temp[i]
+        i += 1
+        k += 1
+    while j < n:
+        nums1[k] = nums2[j]
+        j += 1
+        k += 1
     return nums1
-print(merge_sorted_arrays([1,2,3,0,0,0],[2,5,6]))
+print(merge_sorted_arrays([1,2,3,0,0,0],3,[2,5,6],3))
