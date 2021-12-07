@@ -25,7 +25,9 @@ def valid_sudoku(board):
 
     for i in range(0,N,3):
         for j in range(0,N,3):
-            pass
+            if not helper(i,j):
+                return False
+    return True
 
 
 print(valid_sudoku([["5","3",".",".","7",".",".",".","."]
