@@ -14,9 +14,9 @@ class Solution:
         self.postorder(root.right)
         self.arr.append(root.val)
         return self.arr
-s=Solution(5)
-s.root.left=Node(3)
-s.root.right= Node(4)
-s.root.left.left=Node(1)
-s.root.left.right=Node(2)
+
+s=Solution(2)
+s.root.left=Node(1)
+s.root.right=Node(3)
+
 print(s.postorder(s.root))
