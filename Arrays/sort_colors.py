@@ -1,4 +1,4 @@
-def sort_colors(arr):
+def sort_colors(arr): #dutch national flag problem- three pointer approach
     p0,curr=0,0
     last=len(arr)-1
     while curr<=last:
