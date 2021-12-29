@@ -9,6 +9,7 @@ def max_num_of_words_can_type(s,brokenletters):
         if valid:
             res+=1
     return res
+
 print(max_num_of_words_can_type("hello world",''))
 
 
