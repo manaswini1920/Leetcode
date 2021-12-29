@@ -12,6 +12,4 @@ def sort_colors(arr): #dutch national flag problem- three pointer approach
         else:
             curr+=1
     return arr
-
-
 print(sort_colors([2,0,1,0,1]))
