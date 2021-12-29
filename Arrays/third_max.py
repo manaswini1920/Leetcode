@@ -31,4 +31,5 @@ def third_max(nums):
     if len(maximums)==3:
         return min(maximums)
     return max(maximums)
+
 print(third_max([1,2,3,4,5,6]))
