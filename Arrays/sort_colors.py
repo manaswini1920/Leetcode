@@ -12,4 +12,6 @@ def sort_colors(arr):
         else:
             curr+=1
     return arr
+
+
 print(sort_colors([2,0,1,0,1]))
