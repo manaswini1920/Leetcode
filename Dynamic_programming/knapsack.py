@@ -16,4 +16,4 @@ def knap_recur(dp,profits,weights,capacity,i):
     dp[i][capacity]=max(profit1,profit2)
     return dp[i][capacity]
 
-print(knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7))
+print(knapsack([4,5,3,7], [2,3,1,4], 5))
