@@ -9,4 +9,19 @@ def majority(nums):
     for i,j in d.items():
         if j>n:
             return i
+
+'''
+approach 2:
+-----------
+
+nums.sort()
+return nums[len(nums)//2]
+
+-------
+approach 3:
+------
+
+count=Counter(nums)
+return sort(count.keys(),key=count.get)
+'''
 print(majority([3,2,3,2,2,2]))
