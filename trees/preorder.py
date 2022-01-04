@@ -19,3 +19,17 @@ s=Solution(2)
 s.root.left=Node(1)
 s.root.right=Node(3)
 print(s.preorder(s.root))
+'''
+ if root is None:
+            return None
+        stack=[root]
+        output=[]
+        while stack:
+            root=stack.pop()
+            output.append(root.val)
+            if root.right:
+                stack.append(root.right)
+            if root.left:
+                stack.append(root.left)
+        return output
+'''

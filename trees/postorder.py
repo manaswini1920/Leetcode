@@ -20,3 +20,6 @@ s.root.left=Node(1)
 s.root.right=Node(3)
 
 print(s.postorder(s.root))
+'''
+
+'''

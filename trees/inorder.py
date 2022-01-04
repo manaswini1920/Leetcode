@@ -19,3 +19,17 @@ s=Solution(2)
 s.root.left=Node(1)
 s.root.right=Node(3)
 print(s.inorder(s.root))
+'''
+def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        curr=root
+        res=[]
+        stack=[]
+        while curr or stack:
+            while curr:
+                stack.append(curr)
+                curr=curr.left
+            curr=stack.pop()
+            res.append(curr.val)
+            curr=curr.right
+        return res
+'''
