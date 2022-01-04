@@ -21,5 +21,13 @@ s.root.right=Node(3)
 
 print(s.postorder(s.root))
 '''
-
+res = [] 
+stack = [root]
+while stack:
+    curr = stack.pop()
+    if curr:
+        res.append(curr.val)
+        stack.append(curr.left)
+        stack.append(curr.right)
+return res[::-1]
 '''
