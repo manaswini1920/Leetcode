@@ -8,31 +8,34 @@ Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no di
 If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -231 should be clamped to -231, and integers greater than 231 - 1 should be clamped to 231 - 1.
 Return the integer as the final result.
 '''
-i = 0
-res = 0
-neg = 1
-max_int = 2 ** 31 - 1
-min_int = -2 ** 31
-# whitespaces
-while i < len(s) and s[i] == ' ':
-    i += 1
 
-# +/-
-if i < len(s) and s[i] == '-':
-    i += 1
-    neg = -1
-elif i < len(s) and s[i] == '+':
-    i += 1
 
-# numbers
-check = set('0123456789')
-while i < len(s) and s[i] in check:
-    res = res * 10 + int(s[i])
-    i += 1
-# to int
-res = res * neg
+def myAtoi(self, s: str) -> int:
+    i = 0
+    res = 0
+    neg = 1
+    max_int = 2 ** 31 - 1
+    min_int = -2 ** 31
+    # whitespaces
+    while i < len(s) and s[i] == ' ':
+        i += 1
 
-# range
-if res < 0:
-    return max(res, min_int)
-return min(res, max_int)
+    # +/-
+    if i < len(s) and s[i] == '-':
+        i += 1
+        neg = -1
+    elif i < len(s) and s[i] == '+':
+        i += 1
+
+    # numbers
+    check = set('0123456789')
+    while i < len(s) and s[i] in check:
+        res = res * 10 + int(s[i])
+        i += 1
+    # to int
+    res = res * neg
+
+    # range
+    if res < 0:
+        return max(res, min_int)
+    return min(res, max_int)
